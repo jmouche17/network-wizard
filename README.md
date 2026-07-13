@@ -38,7 +38,7 @@ cd network-wizard
 
 **2. Run the setup script**
 ```bash
-bash dockert-setup.sh
+bash docker-setup.sh
 ```
 
 -----Windows-----
