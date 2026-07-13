@@ -25,7 +25,7 @@
 
 ### Prerequisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Mac / Windows / Linux)
+- Docker (Mac / Windows / Linux)
 - Git or a way to download the release zip
 
 ### Installation
@@ -118,14 +118,14 @@ ports:
 
 ## Use Cases
 
-### 1. Multi-site Fortigate Configuration Deployment
+### 1. Multi-site Network Configuration Deployment
 
-Managing dozens of Fortigate firewalls across multiple sites with consistent baseline configs is time-consuming and error-prone when done manually. Network Wizard lets you define a template config file once and push it to every device in a group with a single click.
+Managing dozens of Network equipment across multiple sites with consistent baseline configs is time-consuming and error-prone when done manually. Network Wizard lets you define a template config file once and push it to every device in a group with a single click.
 
 **How it works:**
 
-1. Add all Fortigate devices to Network Wizard with their API tokens stored encrypted
-2. Create a template file (`fortigate_vlan_config.txt`) in the Files tab with placeholders:
+1. Add all network devices to Network Wizard with their API tokens stored encrypted
+2. Create a template file (`vlan_config.txt`) in the Files tab with placeholders:
 
 ```
 config system interface
@@ -141,7 +141,7 @@ end
 
 3. Write a script that reads the template, substitutes per-site IP values collected from the input form, and pushes via Netmiko or the Fortigate REST API
 4. Use the `# INPUTS:` block to let the engineer fill in site-specific values (VLAN IPs, subnet masks) before running
-5. Run against the "Fortigate" device group — all devices get configured in parallel with real-time output streaming to the console
+5. Run against the "Network" device group — all devices get configured in parallel with real-time output streaming to the console
 
 **Result:** What used to take 2-3 hours of SSH copy-paste across 15 firewalls takes 5 minutes.
 
