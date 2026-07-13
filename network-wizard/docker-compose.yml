@@ -1,0 +1,19 @@
+services:
+  network-wizard:
+    build: .
+    container_name: network-wizard
+    ports:
+      - "5000:5000"        # web app (TCP)
+      - "6969:6969/udp"    # TFTP server (UDP)
+      - "69:69/udp"        # TFTP standard port (UDP) — optional, may need root
+    volumes:
+      - ./data:/app/data
+      - ./scripts:/app/scripts
+      - ./uploads:/app/uploads
+      - ./backups:/app/backups
+      - ./logs:/app/logs
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY}
+      - ENC_KEY=${ENC_KEY}
+    restart: unless-stopped
