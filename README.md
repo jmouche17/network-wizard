@@ -33,16 +33,23 @@
 **1. Download and extract**
 
 ```bash
-# download the latest release zip and extract it
-unzip network-wizard.zip
-cd device-runner
+cd network-wizard
 ```
 
 **2. Run the setup script**
 
-```bash
-bash docker-setup.sh
+-----Windows-----
+
+**1. Download and extract**
+cd network-wizard
+
+**2. Run the setup script**
+```powershell
+.\docker-setup.ps1
 ```
+***IF you get an execution policy error***
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 
 This will:
 - Verify Docker is installed
