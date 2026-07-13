@@ -1,0 +1,22 @@
+{
+  "core-network": {
+    "name": "core-network",
+    "desc": "Core switching layer",
+    "color": "blue"
+  },
+  "perimeter": {
+    "name": "perimeter",
+    "desc": "Edge and firewall devices",
+    "color": "danger"
+  },
+  "wireless": {
+    "name": "wireless",
+    "desc": "Access points",
+    "color": "success"
+  },
+  "servers": {
+    "name": "servers",
+    "desc": "Server infrastructure",
+    "color": "warn"
+  }
+}
