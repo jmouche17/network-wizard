@@ -37,19 +37,24 @@ cd network-wizard
 ```
 
 **2. Run the setup script**
+```bash
+bash dockert-setup.sh
+```
 
 -----Windows-----
 
 **1. Download and extract**
+```windows
 cd network-wizard
-
+```
 **2. Run the setup script**
 ```powershell
 .\docker-setup.ps1
 ```
 ***IF you get an execution policy error***
+```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
+```
 
 This will:
 - Verify Docker is installed
